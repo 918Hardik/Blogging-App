@@ -31,7 +31,7 @@ const UpdateBlog = () => {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const { data } = await axios.get(`http://localhost:4000/api/v1/blog/singleblog/${id}`, { withCredentials: true });
+        const { data } = await axios.get(`https://blogging-app-backend-mqk7.onrender.com/api/v1/blog/singleblog/${id}`, { withCredentials: true });
         setTitle(data.blog.title);
         setIntro(data.blog.intro);
         setMainImage(data.blog.mainImage.url);
@@ -94,7 +94,7 @@ const UpdateBlog = () => {
     }
 
     try {
-      const { data } = await axios.put(`http://localhost:4000/api/v1/blog/update/${id}`, updatedData, { withCredentials: true });
+      const { data } = await axios.put(`https://blogging-app-backend-mqk7.onrender.com/api/v1/blog/update/${id}`, updatedData, { withCredentials: true });
       toast.success(data.message);
     }
     catch (error) {

@@ -9,7 +9,7 @@ const AllAuthors = () => {
 
   useEffect(()=>{
     const fetchAuthors = async()=>{
-      const {data} = await axios.get(https://blogging-app-backend-mqk7.onrender.com/api/v1/user/authors",{withCredentials: true});
+      const {data} = await axios.get("https://blogging-app-backend-mqk7.onrender.com/api/v1/user/authors",{withCredentials: true});
       setAuthors(data.authors);
     };
     fetchAuthors();

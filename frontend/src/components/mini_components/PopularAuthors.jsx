@@ -9,7 +9,7 @@ const PopularAuthors = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const { data } = await axios.get("http://localhost:4000/api/v1/user/authors", { withCredentials: true });
+        const { data } = await axios.get("https://blogging-app-backend-mqk7.onrender.com/api/v1/user/authors", { withCredentials: true });
         setAuthors(data.authors);
         setLoading(false); // Data fetched, set loading to false
       } catch (error) {

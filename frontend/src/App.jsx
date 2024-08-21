@@ -20,7 +20,7 @@ const App = () => {
   useEffect(() => {
     const FetchUser = async () => {
         try {
-            const { data } = await axios.get("http://localhost:4000/api/v1/user/myprofile", {
+            const { data } = await axios.get("https://blogging-app-backend-mqk7.onrender.com/api/v1/user/myprofile", {
                 withCredentials: true
             })
             setUser(data.user);
@@ -33,7 +33,7 @@ const App = () => {
 
     const fetchBlogs = async () => {
         try {
-            const { data } = await axios.get("http://localhost:4000/api/v1/blog/all", { withCredentials: true })
+            const { data } = await axios.get("https://blogging-app-backend-mqk7.onrender.com/api/v1/blog/all", { withCredentials: true })
             setBlogs(data.allBlogs);
         } catch (error) {
             setBlogs([]);

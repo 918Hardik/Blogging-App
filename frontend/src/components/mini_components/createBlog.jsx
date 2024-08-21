@@ -105,7 +105,7 @@ const createBlog = () => {
       formData.append("paraThreedescription",paraThreeDescription)
     }
     try{
-      const {data} = await axios.post("http://localhost:4000/api/v1/blog/post",formData,{withCredentials:true , headers:{"Content-Type":"multipart/form-data"}});
+      const {data} = await axios.post("https://blogging-app-backend-mqk7.onrender.com/api/v1/blog/post",formData,{withCredentials:true , headers:{"Content-Type":"multipart/form-data"}});
       setTitle("");
       setIntro("");
       setMainImage("");

@@ -18,7 +18,7 @@ dotenv.config({ path: "./config/config.env" });
 
 //use is a middleware 
 app.use(cors({
-    origin: [https://blogging-app-frontend-trk8.onrender.com],  //origin ek array hota h jisme hum front end ka path dete h
+    origin: ['https://blogging-app-frontend-trk8.onrender.com'],  //origin ek array hota h jisme hum front end ka path dete h
     methods: ["GET", "PUT", "DELETE", "POST"],  //methods jo hum use krenge apne project mai example, delete , post ,get 
     credentials: true,
 
